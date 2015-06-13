@@ -42,6 +42,7 @@ public class MainActivity extends ActionBarActivity {
     }
     public void startDefaultIntro(View v){
         Intent intent = new Intent(this, DefaultIntro.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
 }

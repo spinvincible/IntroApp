@@ -20,12 +20,15 @@ public class DefaultIntro extends AppIntro {
 
     private void loadMainActivity() {
         Intent intent = new Intent(this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
+
     }
 
     @Override
     public void onSkipPressed() {
         loadMainActivity();
+
         Toast.makeText(getApplicationContext(), "You are well Set ", Toast.LENGTH_SHORT).show();
     }
 
